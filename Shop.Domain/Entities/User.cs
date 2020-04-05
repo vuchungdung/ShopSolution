@@ -40,5 +40,7 @@ namespace Shop.Domain.Entities
 
         [StringLength(50)]
         public string CreateBy { get; set; }
+
+        public string Image { get; set; }
     }
 }

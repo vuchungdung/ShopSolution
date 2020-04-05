@@ -77,7 +77,7 @@ namespace Shop.Domain.DAO
             int totalRow = 0;
             if (!string.IsNullOrEmpty(keyword))
             {
-                list = _context.Users.Where(x => x.Name.Contains(keyword) == true).OrderByDescending(x=>x.CreateDate).ToList();                
+                list = _context.Users.Where(x => x.UserName.Contains(keyword) == true).OrderByDescending(x=>x.CreateDate).ToList();                
             }
             else
             {

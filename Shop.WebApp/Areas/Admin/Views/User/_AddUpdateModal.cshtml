@@ -1,0 +1,58 @@
+﻿<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Tài Khoản</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+            </div>
+            <div class="modal-body">
+                <form id="formUser">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Tài Khoản</label>
+                                <input type="text" class="form-control" id="user" placeholder="Nhập vào tài khoản">
+                            </div>
+                            <div class="form-group">
+                                <label>Mật Khẩu</label>
+                                <input type="password" class="form-control" id="pass" placeholder="Nhập vào mật khẩu">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Hình Ảnh</label>
+                                <input type="text" class="form-control" id="image" placeholder="Hình ảnh">
+                                <input type="submit" id="btn-image" value="Chọn" class="btn btn-dark" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Họ Tên</label>
+                                <input type="text" class="form-control" id="name" placeholder="Tên người dùng">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">E-mail</label>
+                                <input type="text" class="form-control" id="email" placeholder="Email người dùng">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Điện Thoại</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Điện thoại người dùng">
+                            </div>
+                            <div class="form-group">
+                                <label>Địa Chỉ</label>
+                                <input type="text" class="form-control" id="address" placeholder="Địa chỉ người dùng">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="status">
+                    <label class="form-check-label" for="exampleCheck1">Trạng thái hoạt động</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btnAdd">Thêm Mới</button>
+                <button type="submit" class="btn btn-primary" id="btnUpdate" style="display:none">Cập Nhật</button>
+            </div>
+        </div>
+    </div>
+</div>

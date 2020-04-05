@@ -39,7 +39,7 @@ namespace Shop.WebApp.Areas.Admin.Controllers
             });
             return Json(value, JsonRequestBehavior.AllowGet);
         }
-        public JsonResult GetAllPaging(string keyword, int pageIndex, int pageSize = 1)
+        public JsonResult GetAllPaging(string keyword, int pageIndex, int pageSize = 5)
         {
             var dao = new UserDAO();
             var result = dao.GetPagingUser(pageIndex, pageSize, keyword);
@@ -49,14 +49,21 @@ namespace Shop.WebApp.Areas.Admin.Controllers
             }
             return Json(null, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult CreateUpdateIndex()
+        {
+            return View();
+        }
         public JsonResult Create(User user)
         {
-            var dao = new UserDAO();
-            var result = dao.Create(user);
-            if(result > 0)
+            if (ModelState.IsValid)
             {
-                return Json(result, JsonRequestBehavior.AllowGet);
-            }
+                var dao = new UserDAO();
+                var result = dao.Create(user);
+                if (result > 0)
+                {
+                    return Json(true, JsonRequestBehavior.AllowGet);
+                }
+            }           
             return Json(null, JsonRequestBehavior.AllowGet);
         }
         public JsonResult Delete(int id)
